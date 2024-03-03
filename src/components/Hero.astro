@@ -1,0 +1,52 @@
+---
+import "../style/globals.css";
+import Promocion from "../components/Promocion.astro";
+import Almuerzo from "../components/Almuerzo.astro";
+---
+
+<section class="layout">
+	<div class="promocion">
+		<Promocion
+			titulo="PROMOCION A TU PINTA"
+			txt_opt1="1 base"
+			txt_opt2="3 ingredientes"
+			txt_opt3="1 jugo"
+			link="Haz click aca para conocer nuestros ingredientes"
+			parrafo="Deléitate con nuestro delicioso sandwich baguette, donde puedes elegir entre una base de suculenta pasta de pollo o jugosa carne mechada. Personaliza tu experiencia seleccionando tres ingredientes de tu preferencia para crear la combinación perfecta. Además, acompaña esta exquisita mezcla con un refrescante jugo."
+		/>
+	</div>
+	<div class="almuerzo">
+		<Almuerzo
+			titulo="ALMUERZOS/COLACIONES"
+			txt_opt1="1 colacion"
+			txt_opt2="1 ensalada"
+			txt_opt3="1 jugo"
+			link="Haz click aca para conocer nuestros almuerzos"
+			parrafo="Te invitamos a deleitar tu paladar con nuestros exquisitos almuerzos diarios. En nuestro variado menú encontrarás una amplia selección de platos que satisfarán todos tus gustos y preferencias. Desde opciones saludables y ligeras hasta delicias más sustanciosas, cada día ofrecemos una experiencia culinaria única."
+		/>
+	</div>
+	<div class="ingredientes">3</div>
+</section>
+
+<style>
+	.layout {
+		width: 100%;
+
+		display: grid;
+		grid:
+			"promocion almuerzo" 1fr
+			"ingredientes ingredientes" 1fr
+			/ 1fr 1fr;
+		grid-auto-flow: row dense;
+	}
+
+	.promocion {
+		grid-area: promocion;
+	}
+	.almuerzo {
+		grid-area: almuerzo;
+	}
+	.ingredientes {
+		grid-area: ingredientes;
+	}
+</style>

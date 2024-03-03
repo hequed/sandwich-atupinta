@@ -1,0 +1,28 @@
+---
+import "../style/globals.css";
+const { nav_opt1, nav_opt2, nav_opt3, nav_opt4 } = Astro.props;
+---
+
+<nav>
+	<a href="">{nav_opt1}</a>
+	<a href="">{nav_opt2}</a>
+	<a href="">{nav_opt3}</a>
+	<a href="">{nav_opt4}</a>
+</nav>
+
+<style>
+	nav {
+		/* flex-configs */
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+		gap: 20px;
+
+		a {
+			font-family: var(--titlefont);
+			font-size: 1.8rem;
+			color: var(--white);
+		}
+	}
+</style>

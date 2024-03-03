@@ -1,0 +1,33 @@
+---
+import "../style/globals.css";
+import Navbar from "../components/Navbar.astro";
+---
+
+<header>
+	<Navbar
+		nav_opt1="INICIO"
+		nav_opt2="PROMOCIONES"
+		nav_opt3="NOSOTROS"
+		nav_opt4="CONTACTO"
+	/>
+	<img src="./headerlogo.webp" alt="logo" />
+</header>
+
+<style>
+	header {
+		/* flex-configs */
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+
+		/* property-configs */
+		background: var(--black);
+		padding: 30px;
+
+		img {
+			width: 540px;
+			height: 100px;
+		}
+	}
+</style>
