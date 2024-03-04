@@ -2,6 +2,7 @@
 import "../style/globals.css";
 import Promocion from "../components/Promocion.astro";
 import Almuerzo from "../components/Almuerzo.astro";
+import Nosotros from "../components/Nosotros.astro";
 ---
 
 <section class="layout">
@@ -25,7 +26,6 @@ import Almuerzo from "../components/Almuerzo.astro";
 			parrafo="Te invitamos a deleitar tu paladar con nuestros exquisitos almuerzos diarios. En nuestro variado menú encontrarás una amplia selección de platos que satisfarán todos tus gustos y preferencias. Desde opciones saludables y ligeras hasta delicias más sustanciosas, cada día ofrecemos una experiencia culinaria única."
 		/>
 	</div>
-	<div class="ingredientes">3</div>
 </section>
 
 <style>
@@ -35,9 +35,7 @@ import Almuerzo from "../components/Almuerzo.astro";
 		display: grid;
 		grid:
 			"promocion almuerzo" 1fr
-			"ingredientes ingredientes" 1fr
 			/ 1fr 1fr;
-		grid-auto-flow: row dense;
 	}
 
 	.promocion {
@@ -45,8 +43,5 @@ import Almuerzo from "../components/Almuerzo.astro";
 	}
 	.almuerzo {
 		grid-area: almuerzo;
-	}
-	.ingredientes {
-		grid-area: ingredientes;
 	}
 </style>
